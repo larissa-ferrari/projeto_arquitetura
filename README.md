@@ -2,8 +2,8 @@
 
 ## Alunos
 
-Larissa Rodrigues Ferrari | RA: 221151214
-Murilo Augusto Venturato | RA: 221153861
+- Larissa Rodrigues Ferrari | RA: 221151214
+- Murilo Augusto Venturato | RA: 221153861
 
 ## Introdução
 
@@ -12,6 +12,8 @@ Este projeto integra a disciplina de Arquitetura e Organização de Computadores
 ## Sobre a OpenSSL
 
 OpenSSL é uma robusta biblioteca de código aberto amplamente utilizada para implementar os protocolos SSL (Secure Sockets Layer) e TLS (Transport Layer Security). Ela fornece uma vasta gama de ferramentas para criptografia, garantindo a segurança de comunicações através da internet. Além de SSL/TLS, OpenSSL oferece diversas funcionalidades de criptografia, incluindo algoritmos de chave simétrica e assimétrica, funções de hash, e geração de números aleatórios.
+
+Link para o repositório: https://github.com/openssl/openssl/tree/master
 
 ### Utilização da OpenSSL
 
@@ -200,6 +202,10 @@ Essas otimizações permitem que o cálculo do hash seja realizado de maneira ma
 
 Por meio dos relatórios gerados de profiling, chegamos ao código que melhor atingiu otimização de desempenho:
 
+![image](https://github.com/user-attachments/assets/39e0e415-9139-4b6b-9077-2c7c93d3a19a)
+
+![image](https://github.com/user-attachments/assets/a2b94203-783f-4ff8-8e5d-e1ba3855ac48)
+
 #### Observações sobre as Métricas
 
 1. **Tempo de Clock e Tempo Decorrido**:
@@ -256,6 +262,10 @@ A segunda otimização foi baseada na primeira, com foco em melhorar o desempenh
 -   Opções de compilação como `-march=native -msha` foram usadas para habilitar suporte a instruções específicas do processador.
 
 #### Análise das Métricas
+
+![image](https://github.com/user-attachments/assets/8a358ff0-cca8-42f6-9219-ac145a3dc388)
+
+![image](https://github.com/user-attachments/assets/4d38ac85-4c0d-4020-b0ec-1edddd10cba8)
 
 Comparando os relatórios, podemos observar:
 
@@ -374,6 +384,10 @@ void sha256_transform_intrinsics(__m256i state[8], const unsigned char data[64])
 -   As operações vetoriais permitem processar múltiplos elementos de dados em paralelo, aproveitando ao máximo a largura de banda da CPU.
 
 #### Resultados de Performance
+
+![image](https://github.com/user-attachments/assets/be2ed4da-02d3-4b6e-9106-ffd1926a59cc)
+
+![image](https://github.com/user-attachments/assets/62bb2de1-d07b-4966-a3e5-2858f7969447)
 
 A otimização com intrinsics AVX2 resultou em melhorias significativas no desempenho do código SHA-256. O tempo de clock foi reduzido de 3,49 msec para 3,08 msec, indicando uma execução mais rápida. Além disso, houve uma redução considerável nos ciclos necessários, de 11.715.410 para 10.093.874, o que demonstra uma maior eficiência na utilização da CPU. O IPC (Instruções por Ciclo) aumentou de 0,83 para 0,97, refletindo uma execução mais eficiente das instruções. As branches permaneceram praticamente inalteradas, enquanto o número de branch misses teve uma leve redução, de 37.251 para 36.595, melhorando a previsibilidade do fluxo de controle. No entanto, a otimização não resultou em uma diminuição significativa no número total de instruções executadas, sugerindo que a lógica geral do código não mudou drasticamente. Além disso, houve um leve aumento nas page-faults e na quantidade de tempo total decorrido, o que pode indicar uma sobrecarga adicional em algumas áreas do sistema.
 
