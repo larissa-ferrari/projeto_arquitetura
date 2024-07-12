@@ -1,0 +1,21 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 8  of event 'cycles:P'
+# Event count (approx.): 5025371
+#
+# Overhead  Command  Shared Object      Symbol                   
+# ........  .......  .................  .........................
+#
+    62.51%  main     [kernel.kallsyms]  [k] cgroup_rstat_updated
+    35.20%  main     [kernel.kallsyms]  [k] do_fault
+     2.20%  perf-ex  [kernel.kallsyms]  [k] _raw_spin_lock
+     0.09%  perf-ex  [kernel.kallsyms]  [k] native_apic_msr_write
+     0.00%  perf-ex  [kernel.kallsyms]  [k] native_write_msr
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

@@ -1,0 +1,593 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 11  of event 'cycles:P'
+# Event count (approx.): 4142969
+#
+# Children      Self  Command  Shared Object         Symbol                            
+# ........  ........  .......  ....................  ..................................
+#
+    63.47%     0.00%  main     [unknown]             [.] 0x0000000000000040
+            |
+            ---0x40
+               _dl_sysdep_start
+               |          
+               |--32.32%--dl_main
+               |          _dl_relocate_object
+               |          
+                --31.15%--__pthread_tunables_init
+                          asm_exc_page_fault
+
+    63.47%     0.00%  main     ld-linux-x86-64.so.2  [.] _dl_sysdep_start
+            |
+            ---_dl_sysdep_start
+               |          
+               |--32.32%--dl_main
+               |          _dl_relocate_object
+               |          
+                --31.15%--__pthread_tunables_init
+                          asm_exc_page_fault
+
+    35.70%     0.00%  main     [kernel.kallsyms]     [k] entry_SYSCALL_64_after_hwframe
+            |
+            ---entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_execve
+               do_execveat_common.isra.0
+               bprm_execve
+               bprm_execve.part.0
+               exec_binprm
+               |          
+               |--27.64%--proc_exec_connector
+               |          cn_netlink_send
+               |          cn_netlink_send_mult
+               |          netlink_has_listeners
+               |          
+                --8.06%--search_binary_handler
+                          load_elf_binary
+                          setup_arg_pages
+                          mprotect_fixup
+                          vma_merge
+
+    35.70%     0.00%  main     [kernel.kallsyms]     [k] do_syscall_64
+            |
+            ---do_syscall_64
+               x64_sys_call
+               __x64_sys_execve
+               do_execveat_common.isra.0
+               bprm_execve
+               bprm_execve.part.0
+               exec_binprm
+               |          
+               |--27.64%--proc_exec_connector
+               |          cn_netlink_send
+               |          cn_netlink_send_mult
+               |          netlink_has_listeners
+               |          
+                --8.06%--search_binary_handler
+                          load_elf_binary
+                          setup_arg_pages
+                          mprotect_fixup
+                          vma_merge
+
+    35.70%     0.00%  main     [kernel.kallsyms]     [k] x64_sys_call
+            |
+            ---x64_sys_call
+               __x64_sys_execve
+               do_execveat_common.isra.0
+               bprm_execve
+               bprm_execve.part.0
+               exec_binprm
+               |          
+               |--27.64%--proc_exec_connector
+               |          cn_netlink_send
+               |          cn_netlink_send_mult
+               |          netlink_has_listeners
+               |          
+                --8.06%--search_binary_handler
+                          load_elf_binary
+                          setup_arg_pages
+                          mprotect_fixup
+                          vma_merge
+
+    35.70%     0.00%  main     [kernel.kallsyms]     [k] __x64_sys_execve
+            |
+            ---__x64_sys_execve
+               do_execveat_common.isra.0
+               bprm_execve
+               bprm_execve.part.0
+               exec_binprm
+               |          
+               |--27.64%--proc_exec_connector
+               |          cn_netlink_send
+               |          cn_netlink_send_mult
+               |          netlink_has_listeners
+               |          
+                --8.06%--search_binary_handler
+                          load_elf_binary
+                          setup_arg_pages
+                          mprotect_fixup
+                          vma_merge
+
+    35.70%     0.00%  main     [kernel.kallsyms]     [k] do_execveat_common.isra.0
+            |
+            ---do_execveat_common.isra.0
+               bprm_execve
+               bprm_execve.part.0
+               exec_binprm
+               |          
+               |--27.64%--proc_exec_connector
+               |          cn_netlink_send
+               |          cn_netlink_send_mult
+               |          netlink_has_listeners
+               |          
+                --8.06%--search_binary_handler
+                          load_elf_binary
+                          setup_arg_pages
+                          mprotect_fixup
+                          vma_merge
+
+    35.70%     0.00%  main     [kernel.kallsyms]     [k] bprm_execve
+            |
+            ---bprm_execve
+               bprm_execve.part.0
+               exec_binprm
+               |          
+               |--27.64%--proc_exec_connector
+               |          cn_netlink_send
+               |          cn_netlink_send_mult
+               |          netlink_has_listeners
+               |          
+                --8.06%--search_binary_handler
+                          load_elf_binary
+                          setup_arg_pages
+                          mprotect_fixup
+                          vma_merge
+
+    35.70%     0.00%  main     [kernel.kallsyms]     [k] bprm_execve.part.0
+            |
+            ---bprm_execve.part.0
+               exec_binprm
+               |          
+               |--27.64%--proc_exec_connector
+               |          cn_netlink_send
+               |          cn_netlink_send_mult
+               |          netlink_has_listeners
+               |          
+                --8.06%--search_binary_handler
+                          load_elf_binary
+                          setup_arg_pages
+                          mprotect_fixup
+                          vma_merge
+
+    35.70%     0.00%  main     [kernel.kallsyms]     [k] exec_binprm
+            |
+            ---exec_binprm
+               |          
+               |--27.64%--proc_exec_connector
+               |          cn_netlink_send
+               |          cn_netlink_send_mult
+               |          netlink_has_listeners
+               |          
+                --8.06%--search_binary_handler
+                          load_elf_binary
+                          setup_arg_pages
+                          mprotect_fixup
+                          vma_merge
+
+    32.32%    32.32%  main     ld-linux-x86-64.so.2  [.] _dl_relocate_object
+            |
+            ---0x40
+               _dl_sysdep_start
+               dl_main
+               _dl_relocate_object
+
+    32.32%     0.00%  main     ld-linux-x86-64.so.2  [.] dl_main
+            |
+            ---dl_main
+               _dl_relocate_object
+
+    31.15%    31.15%  main     libc.so.6             [.] __tunable_get_val@plt
+            |
+            ---0x40
+               _dl_sysdep_start
+               __pthread_tunables_init
+               asm_exc_page_fault
+
+    31.15%     0.00%  main     libc.so.6             [.] __pthread_tunables_init
+            |
+            ---__pthread_tunables_init
+               asm_exc_page_fault
+
+    31.15%     0.00%  main     [kernel.kallsyms]     [k] asm_exc_page_fault
+            |
+            ---asm_exc_page_fault
+
+    27.64%    27.64%  main     [kernel.kallsyms]     [k] netlink_has_listeners
+            |
+            ---_start
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_execve
+               do_execveat_common.isra.0
+               bprm_execve
+               bprm_execve.part.0
+               exec_binprm
+               proc_exec_connector
+               cn_netlink_send
+               cn_netlink_send_mult
+               netlink_has_listeners
+
+    27.64%     0.00%  main     ld-linux-x86-64.so.2  [.] _start
+            |
+            ---_start
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_execve
+               do_execveat_common.isra.0
+               bprm_execve
+               bprm_execve.part.0
+               exec_binprm
+               proc_exec_connector
+               cn_netlink_send
+               cn_netlink_send_mult
+               netlink_has_listeners
+
+    27.64%     0.00%  main     [kernel.kallsyms]     [k] proc_exec_connector
+            |
+            ---proc_exec_connector
+               cn_netlink_send
+               cn_netlink_send_mult
+               netlink_has_listeners
+
+    27.64%     0.00%  main     [kernel.kallsyms]     [k] cn_netlink_send
+            |
+            ---cn_netlink_send
+               cn_netlink_send_mult
+               netlink_has_listeners
+
+    27.64%     0.00%  main     [kernel.kallsyms]     [k] cn_netlink_send_mult
+            |
+            ---cn_netlink_send_mult
+               netlink_has_listeners
+
+     8.06%     8.06%  main     [kernel.kallsyms]     [k] vma_merge
+            |
+            ---0x7215f68eb08b
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_execve
+               do_execveat_common.isra.0
+               bprm_execve
+               bprm_execve.part.0
+               exec_binprm
+               search_binary_handler
+               load_elf_binary
+               setup_arg_pages
+               mprotect_fixup
+               vma_merge
+
+     8.06%     0.00%  main     [unknown]             [k] 0x00007215f68eb08b
+            |
+            ---0x7215f68eb08b
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_execve
+               do_execveat_common.isra.0
+               bprm_execve
+               bprm_execve.part.0
+               exec_binprm
+               search_binary_handler
+               load_elf_binary
+               setup_arg_pages
+               mprotect_fixup
+               vma_merge
+
+     8.06%     0.00%  main     [kernel.kallsyms]     [k] search_binary_handler
+            |
+            ---search_binary_handler
+               load_elf_binary
+               setup_arg_pages
+               mprotect_fixup
+               vma_merge
+
+     8.06%     0.00%  main     [kernel.kallsyms]     [k] load_elf_binary
+            |
+            ---load_elf_binary
+               setup_arg_pages
+               mprotect_fixup
+               vma_merge
+
+     8.06%     0.00%  main     [kernel.kallsyms]     [k] setup_arg_pages
+            |
+            ---setup_arg_pages
+               mprotect_fixup
+               vma_merge
+
+     8.06%     0.00%  main     [kernel.kallsyms]     [k] mprotect_fixup
+            |
+            ---mprotect_fixup
+               vma_merge
+
+     0.83%     0.01%  perf-ex  [kernel.kallsyms]     [k] native_write_msr
+            |          
+             --0.82%--native_write_msr
+
+     0.83%     0.00%  perf-ex  [unknown]             [k] 0x00007215f68eb08b
+            |
+            ---0x7215f68eb08b
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_execve
+               do_execveat_common.isra.0
+               bprm_execve
+               bprm_execve.part.0
+               exec_binprm
+               search_binary_handler
+               load_elf_binary
+               begin_new_exec
+               perf_event_exec
+               perf_event_enable_on_exec
+               ctx_resched
+               perf_ctx_enable
+               x86_pmu_enable
+               intel_pmu_enable_all
+               native_write_msr
+
+     0.83%     0.00%  perf-ex  [kernel.kallsyms]     [k] entry_SYSCALL_64_after_hwframe
+            |
+            ---entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_execve
+               do_execveat_common.isra.0
+               bprm_execve
+               bprm_execve.part.0
+               exec_binprm
+               search_binary_handler
+               load_elf_binary
+               begin_new_exec
+               perf_event_exec
+               perf_event_enable_on_exec
+               ctx_resched
+               perf_ctx_enable
+               x86_pmu_enable
+               intel_pmu_enable_all
+               native_write_msr
+
+     0.83%     0.00%  perf-ex  [kernel.kallsyms]     [k] do_syscall_64
+            |
+            ---do_syscall_64
+               x64_sys_call
+               __x64_sys_execve
+               do_execveat_common.isra.0
+               bprm_execve
+               bprm_execve.part.0
+               exec_binprm
+               search_binary_handler
+               load_elf_binary
+               begin_new_exec
+               perf_event_exec
+               perf_event_enable_on_exec
+               ctx_resched
+               perf_ctx_enable
+               x86_pmu_enable
+               intel_pmu_enable_all
+               native_write_msr
+
+     0.83%     0.00%  perf-ex  [kernel.kallsyms]     [k] x64_sys_call
+            |
+            ---x64_sys_call
+               __x64_sys_execve
+               do_execveat_common.isra.0
+               bprm_execve
+               bprm_execve.part.0
+               exec_binprm
+               search_binary_handler
+               load_elf_binary
+               begin_new_exec
+               perf_event_exec
+               perf_event_enable_on_exec
+               ctx_resched
+               perf_ctx_enable
+               x86_pmu_enable
+               intel_pmu_enable_all
+               native_write_msr
+
+     0.83%     0.00%  perf-ex  [kernel.kallsyms]     [k] __x64_sys_execve
+            |
+            ---__x64_sys_execve
+               do_execveat_common.isra.0
+               bprm_execve
+               bprm_execve.part.0
+               exec_binprm
+               search_binary_handler
+               load_elf_binary
+               begin_new_exec
+               perf_event_exec
+               perf_event_enable_on_exec
+               ctx_resched
+               perf_ctx_enable
+               x86_pmu_enable
+               intel_pmu_enable_all
+               native_write_msr
+
+     0.83%     0.00%  perf-ex  [kernel.kallsyms]     [k] do_execveat_common.isra.0
+            |
+            ---do_execveat_common.isra.0
+               bprm_execve
+               bprm_execve.part.0
+               exec_binprm
+               search_binary_handler
+               load_elf_binary
+               begin_new_exec
+               perf_event_exec
+               perf_event_enable_on_exec
+               ctx_resched
+               perf_ctx_enable
+               x86_pmu_enable
+               intel_pmu_enable_all
+               native_write_msr
+
+     0.83%     0.00%  perf-ex  [kernel.kallsyms]     [k] bprm_execve
+            |
+            ---bprm_execve
+               bprm_execve.part.0
+               exec_binprm
+               search_binary_handler
+               load_elf_binary
+               begin_new_exec
+               perf_event_exec
+               perf_event_enable_on_exec
+               ctx_resched
+               perf_ctx_enable
+               x86_pmu_enable
+               intel_pmu_enable_all
+               native_write_msr
+
+     0.83%     0.00%  perf-ex  [kernel.kallsyms]     [k] bprm_execve.part.0
+            |
+            ---bprm_execve.part.0
+               exec_binprm
+               search_binary_handler
+               load_elf_binary
+               begin_new_exec
+               perf_event_exec
+               perf_event_enable_on_exec
+               ctx_resched
+               perf_ctx_enable
+               x86_pmu_enable
+               intel_pmu_enable_all
+               native_write_msr
+
+     0.83%     0.00%  perf-ex  [kernel.kallsyms]     [k] exec_binprm
+            |
+            ---exec_binprm
+               search_binary_handler
+               load_elf_binary
+               begin_new_exec
+               perf_event_exec
+               perf_event_enable_on_exec
+               ctx_resched
+               perf_ctx_enable
+               x86_pmu_enable
+               intel_pmu_enable_all
+               native_write_msr
+
+     0.83%     0.00%  perf-ex  [kernel.kallsyms]     [k] search_binary_handler
+            |
+            ---search_binary_handler
+               load_elf_binary
+               begin_new_exec
+               perf_event_exec
+               perf_event_enable_on_exec
+               ctx_resched
+               perf_ctx_enable
+               x86_pmu_enable
+               intel_pmu_enable_all
+               native_write_msr
+
+     0.83%     0.00%  perf-ex  [kernel.kallsyms]     [k] load_elf_binary
+            |
+            ---load_elf_binary
+               begin_new_exec
+               perf_event_exec
+               perf_event_enable_on_exec
+               ctx_resched
+               perf_ctx_enable
+               x86_pmu_enable
+               intel_pmu_enable_all
+               native_write_msr
+
+     0.83%     0.00%  perf-ex  [kernel.kallsyms]     [k] begin_new_exec
+            |
+            ---begin_new_exec
+               perf_event_exec
+               perf_event_enable_on_exec
+               ctx_resched
+               perf_ctx_enable
+               x86_pmu_enable
+               intel_pmu_enable_all
+               native_write_msr
+
+     0.83%     0.00%  perf-ex  [kernel.kallsyms]     [k] perf_event_exec
+            |
+            ---perf_event_exec
+               perf_event_enable_on_exec
+               ctx_resched
+               perf_ctx_enable
+               x86_pmu_enable
+               intel_pmu_enable_all
+               native_write_msr
+
+     0.83%     0.00%  perf-ex  [kernel.kallsyms]     [k] perf_event_enable_on_exec
+            |
+            ---perf_event_enable_on_exec
+               ctx_resched
+               perf_ctx_enable
+               x86_pmu_enable
+               intel_pmu_enable_all
+               native_write_msr
+
+     0.83%     0.00%  perf-ex  [kernel.kallsyms]     [k] ctx_resched
+            |
+            ---ctx_resched
+               perf_ctx_enable
+               x86_pmu_enable
+               intel_pmu_enable_all
+               native_write_msr
+
+     0.83%     0.00%  perf-ex  [kernel.kallsyms]     [k] perf_ctx_enable
+            |
+            ---perf_ctx_enable
+               x86_pmu_enable
+               intel_pmu_enable_all
+               native_write_msr
+
+     0.83%     0.00%  perf-ex  [kernel.kallsyms]     [k] x86_pmu_enable
+            |
+            ---x86_pmu_enable
+               intel_pmu_enable_all
+               native_write_msr
+
+     0.83%     0.00%  perf-ex  [kernel.kallsyms]     [k] intel_pmu_enable_all
+            |
+            ---intel_pmu_enable_all
+               native_write_msr
+
+     0.76%     0.76%  perf-ex  [kernel.kallsyms]     [k] perf_event_nmi_handler
+            |
+            ---0x7215f68eb08b
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_execve
+               do_execveat_common.isra.0
+               bprm_execve
+               bprm_execve.part.0
+               exec_binprm
+               search_binary_handler
+               load_elf_binary
+               begin_new_exec
+               perf_event_exec
+               perf_event_enable_on_exec
+               ctx_resched
+               perf_ctx_enable
+               x86_pmu_enable
+               intel_pmu_enable_all
+               native_write_msr
+
+     0.06%     0.06%  perf-ex  [kernel.kallsyms]     [k] native_sched_clock
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

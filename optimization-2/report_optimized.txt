@@ -1,0 +1,20 @@
+# started on Wed Jul 10 23:21:55 2024
+
+
+ Performance counter stats for './main_optimized':
+
+              0,87 msec task-clock                       #    0,001 CPUs utilized             
+                 0      context-switches                 #    0,000 /sec                      
+                 0      cpu-migrations                   #    0,000 /sec                      
+               178      page-faults                      #  203,477 K/sec                     
+         2.948.494      cycles                           #    3,371 GHz                       
+         2.703.861      instructions                     #    0,92  insn per cycle            
+           492.704      branches                         #  563,225 M/sec                     
+            10.272      branch-misses                    #    2,08% of all branches           
+
+       0,747210389 seconds time elapsed
+
+       0,000212000 seconds user
+       0,000000000 seconds sys
+
+

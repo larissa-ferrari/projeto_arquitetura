@@ -1,0 +1,20 @@
+# started on Wed Jul 10 21:11:24 2024
+
+
+ Performance counter stats for './main':
+
+              0,81 msec task-clock                       #    0,001 CPUs utilized             
+                 0      context-switches                 #    0,000 /sec                      
+                 0      cpu-migrations                   #    0,000 /sec                      
+               177      page-faults                      #  219,104 K/sec                     
+         2.640.405      cycles                           #    3,268 GHz                       
+         2.683.364      instructions                     #    1,02  insn per cycle            
+           489.540      branches                         #  605,990 M/sec                     
+             9.947      branch-misses                    #    2,03% of all branches           
+
+       0,695060320 seconds time elapsed
+
+       0,001371000 seconds user
+       0,000000000 seconds sys
+
+
